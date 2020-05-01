@@ -22,6 +22,11 @@ final class Loader
         $this->rules = $rules;
     }
 
+    public static function new (Finder $finder, array $rules = []): self
+    {
+        return new self($finder, $rules);
+    }
+
     public function getConfig (): Config
     {
         return Config::create()
