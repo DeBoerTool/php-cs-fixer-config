@@ -1,0 +1,22 @@
+{
+    "name": "dbt/php-cs-fixer-config",
+    "description": "De Boer Tool PHP-CS-Fixer Configuration",
+    "type": "configuration",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel S. Deboer",
+            "email": "daniel.s.deboer@gmail.com"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "\\Dbt\\PhpCsFixerConfig\\": [
+                "/src"
+            ]
+        }
+    }
+}
