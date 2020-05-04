@@ -5,5 +5,8 @@ return [
     '@PSR2' => true,
     'function_declaration' => false,
     'multiline_whitespace_before_semicolons' => false,
-    'yoda_style' => false, // This shit, tho.
+    // This shit, tho.
+    'yoda_style' => false,
+    // Prefer compact DocBlocks if you need DocBlocks.
+    'phpdoc_separation' => false,
 ];
