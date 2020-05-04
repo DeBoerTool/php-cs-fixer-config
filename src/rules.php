@@ -9,4 +9,8 @@ return [
     'yoda_style' => false,
     // Prefer compact DocBlocks if you need DocBlocks.
     'phpdoc_separation' => false,
+    // Prefer $var++ instead of ++$var
+    'increment_style' => [
+        'style' => 'post',
+    ],
 ];
