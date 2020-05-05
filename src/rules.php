@@ -13,4 +13,16 @@ return [
     'increment_style' => [
         'style' => 'post',
     ],
+    // Don't be fussy with DocBlock alignment.
+    'phpdoc_align' => [
+        'align' => 'left',
+    ],
+    // Give concats a little space to breathe.
+    'concat_space' => [
+        'spacing' => 'one',
+    ],
+    // because_we_prefer_our_test_names_like_this.
+    'php_unit_method_casing' => [
+        'case' => 'snake_case',
+    ],
 ];

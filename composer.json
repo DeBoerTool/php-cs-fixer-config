@@ -18,5 +18,8 @@
                 "src/"
             ]
         }
+    },
+    "scripts": {
+        "cs-dry": "php-cs-fixer fix --dry-run"
     }
 }
