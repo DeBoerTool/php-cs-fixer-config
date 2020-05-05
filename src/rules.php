@@ -1,21 +1,32 @@
 <?php
 
-return [
+$rulesets = [
     '@PhpCsFixer' => true,
     '@PSR2' => true,
+];
+
+$phpDocRules = [
+    // Prefer compact DocBlocks if you need DocBlocks. They're already annoying
+    // enough without taking up globs of vertical space.
+    'phpdoc_separation' => false,
+    // We don't want to turn PHPStorm @noinspection and so forth to get
+    // magically transmuted into regular comments, because those annotations
+    // are actually useful.
+    'phpdoc_to_comment' => false,
+    // Don't be fussy with DocBlock alignment.
+    'phpdoc_align' => [
+        'align' => 'left',
+    ],
+];
+
+$otherRules = [
     'function_declaration' => false,
     'multiline_whitespace_before_semicolons' => false,
     // This shit, tho.
     'yoda_style' => false,
-    // Prefer compact DocBlocks if you need DocBlocks.
-    'phpdoc_separation' => false,
     // Prefer $var++ instead of ++$var
     'increment_style' => [
         'style' => 'post',
-    ],
-    // Don't be fussy with DocBlock alignment.
-    'phpdoc_align' => [
-        'align' => 'left',
     ],
     // Give concats a little space to breathe.
     'concat_space' => [
@@ -26,3 +37,5 @@ return [
         'case' => 'snake_case',
     ],
 ];
+
+return array_merge($rulesets, $phpDocRules, $otherRules);
