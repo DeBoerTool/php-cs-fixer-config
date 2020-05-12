@@ -30,6 +30,7 @@ final class Loader
     public function getConfig (): Config
     {
         return Config::create()
+            ->setLineEnding(PHP_EOL)
             ->setFinder($this->getFinder())
             ->setRiskyAllowed($this->getAllowRisky())
             ->setRules($this->getRules());
