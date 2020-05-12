@@ -2,4 +2,5 @@ composer.lock
 vendor
 .php_cs.cache
 .idea
-tests/Scratch.php
+tests/*
+!tests/.gitkeep
