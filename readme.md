@@ -38,7 +38,7 @@ $loader->disallowRisky();
 return $loader->getConfig();
 ```
 
-## Composer
+## Composer Scripts
 
 You can optionally add Composer scripts to your `composer.json` so you don't have to run PHP-CS-Fixer from your vendor directory each time. For example:
 
@@ -54,6 +54,32 @@ You can optionally add Composer scripts to your `composer.json` so you don't hav
 ## PHPStorm
 
 https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html
+
+## GrumPHP
+
+If you wish to use GrumPHP to ensure code checks run pre-commit, you can do something like the following:
+
+Install GrumPHP:
+
+```bash
+composer require --dev phpro/grumphp
+```
+
+Add a configuration file:
+
+```bash
+touch grumphp.yml 
+```
+
+Fill it out, for example:
+
+```yaml
+parameters:
+    ascii: ~
+    tasks:
+        phpcsfixer2:
+            config: '.php_cs.dist'
+```
 
 # License
 
