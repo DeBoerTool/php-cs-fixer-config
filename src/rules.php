@@ -2,7 +2,7 @@
 
 $rulesets = [
     '@PhpCsFixer' => true,
-    '@PSR2' => true,
+    '@PSR12' => true,
 ];
 
 $phpDocRules = [
@@ -22,7 +22,6 @@ $phpDocRules = [
 $otherRules = [
     'function_declaration' => false,
     'multiline_whitespace_before_semicolons' => false,
-    // This shit, tho.
     'yoda_style' => false,
     // Prefer $var++ instead of ++$var
     'increment_style' => [
