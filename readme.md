@@ -6,10 +6,10 @@
 composer require --dev dbt/php-cs-fixer-config
 ```
 
-If you don't already have a `.php_cs.dist` configuration file, create one in your project root:
+If you don't already have a `.php_cs.dist.php` configuration file, create one in your project root:
 
 ```shell script
-touch .php_cs.dist
+touch .php_cs.dist.php
 ```
 
 Then fill it out:
@@ -27,7 +27,7 @@ $finder = Finder::create()->in([
 
 // If you want to add your own rules. If you specify a rule that already exists
 // in the base ruleset, your local rule will take precedence and override the
-// base rule. 
+// base rule.
 $localRules = require(__DIR __ . '/rules.php');
 
 $loader = Loader::new($finder, $localRules);
@@ -68,7 +68,7 @@ composer require --dev phpro/grumphp
 Add a configuration file:
 
 ```bash
-touch grumphp.yml 
+touch grumphp.yml
 ```
 
 Fill it out, for example:
@@ -78,7 +78,7 @@ parameters:
     ascii: ~
     tasks:
         phpcsfixer2:
-            config: '.php_cs.dist'
+            config: '.php_cs.dist.php'
 ```
 
 # License
